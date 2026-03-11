@@ -1,45 +1,37 @@
-#Clear terminal
 import os
 os.system('cls' if os.name == 'nt' else 'clear')
 
-#Simple Calcuator 
+#Calculator 
 
-def add(a, b): #Addition
-    return a + b
+class PrintCalc:
 
-def sub(a, b): #Subtarction
-    return a - b
+    def __init__(self, name):
+        self.name = name
 
-def mul(a, b): #Multiplication
-    return a * b
+Print = PrintCalc("Calculator".center(110))
+print(Print.name)
 
-def div(a, b): #Divison
-    return a / b 
-    if(div != 0):
-        print("Invalid")
+Num1 = float(input("Enter Your First Number:- "))
+Num2 = float(input("Enter Your Sec Number:- "))
 
-print("Simple Calcutor")
+def print_option():
+    print("1.Add\n2.Subtract\n3.Multiply\n4.Divison")
 
-num1 = float(int(input("Enter Your First Number:- "))) # User Num1
-num2 = float(int((input("Enter Your Second Number:- ")))) # User Num2
+print_option()
 
-print("Operation:- ")
-print("1.Add \n2.Subtract  \n3.Multiply  \n4.Divide") # Options
+option = input("Enter Your Option in text:- ")
 
-choice = int(input("Enter Your choice = ")) #Choice Input to user
+def print_sum():
+    if option == "Add":
+        print(Num1 + Num2)
+    elif option == "Subtract":
+        print(Num1 - Num2)
+    elif option == "Multiply":
+        print(Num1 * Num2)
+    elif option == "Divison":
+        print(Num1 / Num2)
+    
+    else:
+        print("Invalid Option?")
 
-if(choice == 1): # choice = ADD
-    print("Result = ", add(num1, num2))
-
-elif(choice == 2): # choice = SUB
-    print("Result = ", sub(num1, num2))
-
-elif(choice == 3): # choice = MUL
-    print("Result = ", mul(num1, num2))
-
-elif(choice == 4): # choice = DIV
-    print("Result = ", div(num1, num2))
-
-else:
-    print("Invalid Choice")
-
+print_sum()
