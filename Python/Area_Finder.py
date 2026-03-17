@@ -5,10 +5,10 @@ print("____Area Finder____".center(110))
 
 print("1.Trapezium\n2.Square\n3.Hexagon\n4.Rectangle\n5.Paralllelogram\n")
 
-Ask_user = int(input("Enter Your Choice:- "))
+Ask_user = input("Enter Your Choice:- ")
 
 def Choice1():
-    if Ask_user == 1 :
+    if Ask_user == 1 or "Trapezium".lower():
         class Area1:
 
             def __init__(self, A, B, Height):
@@ -27,7 +27,7 @@ def Choice1():
 Choice1()
 
 def Choice2():
-    if Ask_user == 2 :
+    if Ask_user == 2 or "Square".lower() :
         class Area2:
 
             def __init__(self, side):
@@ -44,7 +44,7 @@ def Choice2():
 Choice2()
 
 def Choice3():
-    if Ask_user == 3 :
+    if Ask_user == 3 or "Hexagon".lower():
         class Area3:
 
             def __init__(self, side2):
@@ -61,7 +61,7 @@ def Choice3():
 Choice3()
 
 def Choice4():
-    if Ask_user == 4 :
+    if Ask_user == 4 or "Rectangle".lower():
         class Area4:
             
             def __init__(self, length, breadth, height):
@@ -81,7 +81,7 @@ def Choice4():
 Choice4()
 
 def Choice5():
-    if Ask_user == 5 :
+    if Ask_user == 5 or "Parllelogram".lower():
         class Area5:
 
             def __init__(self, base, height):
