@@ -12,7 +12,7 @@ class Area:
 
     @property
     def clac(self):
-        print("Your Area of Circle is:",float(self.radius * 3.14159))
+        print("Your Area of Circle is:",float(round(self.radius * 3.14159, 2)))
 
 A1 = Area(float(input("Enter Your Radius:- ")))
 A1.clac
